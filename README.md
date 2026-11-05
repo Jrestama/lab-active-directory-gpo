@@ -122,10 +122,10 @@ Screenshots for each of the above are in `screenshots/`.
 ## Lessons Learned
 
 - DNS is the first thing to check on a failed domain join. A client pointed at the
-  wrong resolver cannot locate the domain at all, and the error it surfaces rarely
-  says so.
-- GPOs apply to OUs, not to the default containers. Objects left in `Computers` or
-  `Users` silently receive nothing.
+  wrong resolver cannot locate the domain at all, and the error doesn't
+  say so.
+- GPOs apply to OUs and not the default containers. Objects left in `Computers` or
+  `Users` receive nothing.
 - Domain account policy must be linked at the domain root to take effect.
 - Item-level targeting makes a single drive-mapping GPO serve multiple groups,
   rather than maintaining one GPO per department.
